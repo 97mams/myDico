@@ -10,7 +10,7 @@ document.getElementById('button').addEventListener('click', async () => {
     main.innerHTML = ''
     const find = handleInput.value
     const datas = await searchParams(v, find);
-
+    handleInput.value = ''
     document.getElementById('total').innerText = `resultat: ${datas.length}`
     for (const data of datas) {
         main.innerHTML += `
