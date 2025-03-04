@@ -2,12 +2,6 @@ import { dataFetch, } from "./fetch.js";
 const main = document.getElementById('main')
 const handleInput = document.getElementById('search')
 
-
-
-main.innerHTML = '<ul id="items"></ul>'
-const listItems = document.getElementById('items')
-
-
 const searchParams = async (params, find) => {
     const result = []
     for (const element of params) {
@@ -23,16 +17,17 @@ const url = '../Vocabulary.json'
 const v = await dataFetch(url)
 
 document.getElementById('button').addEventListener('click', async () => {
-    listItems.innerHTML = ''
+    main.innerHTML = ''
     const find = handleInput.value
     const datas = await searchParams(v, find);
-    console.log(find);
 
-    console.log(datas);
-
-
+    document.getElementById('total').innerText = `resultat: ${datas.length}`
     for (const data of datas) {
-        listItems.innerHTML += `<li>${data.English} / ${data.French}</li>`
+        main.innerHTML += `
+                <tr>
+                    <td>${data.English}</td>
+                    <td>${data.French}</td>
+                </tr>`
     }
 })
 

@@ -5,12 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/picocss.css">
+    <style>
+        .form {
+            width: 30rem;
+            margin: auto;
+            display: flex;
+            gap: 2rem;
+        }
+
+        button {
+            width: 10rem;
+        }
+    </style>
 </head>
-<div>
-    <input type="text" id="search">
-    <button id='button'>search</button>
-    <div id="main"></div>
+<div class="container">
+    <h1>
+        Vocabulary
+        <span>
+            #
+        </span>
+    </h1>
+    <div class="form">
+        <input type="text" id="search">
+        <button id='button'>search</button>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>French</th>
+                </tr>
+            </thead>
+            <tbody id=main></tbody>
+            <tfooter id="total">
+            </tfooter>
+        </table>
+    </div>
 </div>
+<footer>
+    @97mams
+</footer>
 
 <body>
     <script src="./js/app.js" type="module"></script>
