@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>myDico</title>
     <link rel="stylesheet" href="./css/picocss.css">
     <style>
         .form {
@@ -14,18 +14,37 @@
             gap: 2rem;
         }
 
+        span {
+            opacity: 0;
+        }
+
+        h1 {
+            width: 5em;
+            cursor: pointer;
+        }
+
         button {
             width: 10rem;
         }
     </style>
 </head>
 <div class="container">
-    <h1>
-        Vocabulary
-        <span>
-            #
-        </span>
-    </h1>
+    <header>
+        <nav>
+            <h1 id="title">
+                <span>
+                    #
+                </span>
+                <a href="http://github.com/97mams">
+                    myDico
+                </a>
+            </h1>
+
+            <a href="">
+                <img src="./github-icon.svg" alt="git">
+            </a>
+        </nav>
+    </header>
     <div class="form">
         <input type="text" id="search">
         <button id='button'>search</button>
@@ -44,9 +63,6 @@
         </table>
     </div>
 </div>
-<footer>
-    @97mams
-</footer>
 
 <body>
     <script src="./js/app.js" type="module"></script>
