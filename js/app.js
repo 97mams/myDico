@@ -5,8 +5,11 @@ const handleInput = document.getElementById('search')
 const searchParams = async (params, find) => {
     const result = []
     for (const element of params) {
-        const newElement = element.English.toLowerCase()
-        if (newElement.includes(find)) {
+        const englishElement = element.English.toLowerCase()
+        const frenchElement = element.French.toLowerCase()
+        if (englishElement.includes(find)) {
+            result.push(element)
+        } else if (frenchElement.includes(find)) {
             result.push(element)
         }
     }
