@@ -1,5 +1,6 @@
 const url = '../Vocabulary.json'
 import { dataFetch, } from "./fetch.js";
+import { rendre } from "./render.js";
 import { searchParams } from "./searchParams.js";
 const main = document.getElementById('main')
 const handleInput = document.getElementById('search')
@@ -21,12 +22,5 @@ document.getElementById('button').addEventListener('click', async () => {
     const find = handleInput.value
     const datas = await searchParams(v, find);
     handleInput.value = ''
-    document.getElementById('total').innerText = `resultat: ${datas.length}`
-    for (const data of datas) {
-        main.innerHTML += `
-                <tr>
-                    <td>${data.English}</td>
-                    <td>${data.French}</td>
-                </tr>`
-    }
+    rendre(datas)
 })
