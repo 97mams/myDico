@@ -1,0 +1,19 @@
+.form {
+    width: 30rem;
+    margin: auto;
+    display: flex;
+    gap: 2rem;
+}
+
+span {
+    opacity: 0;
+}
+
+h1 {
+    width: 5em;
+    cursor: pointer;
+}
+
+button {
+    width: 10rem;
+}
