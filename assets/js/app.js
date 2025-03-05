@@ -21,6 +21,5 @@ document.getElementById('button').addEventListener('click', async () => {
     main.innerHTML = ''
     const find = handleInput.value
     const datas = await searchParams(v, find);
-    handleInput.value = ''
     rendre(datas)
 })
